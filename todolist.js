@@ -8,7 +8,7 @@ for (i = 0; i < closeButton.length; i++){
     }
 }
 
-const ulList = document.querySelector('ul');
+const ulList = document.getElementsById('the-ul');
 ulList.addEventListener('click', function(event) {
     console.log(event);
     if(event.target.tagName === "LI"){

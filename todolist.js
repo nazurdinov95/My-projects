@@ -1,24 +1,14 @@
-//Creating the Close button for lists that are not created with the main function
-var myList = document.getElementsByTagName("li");
-var index;
-for(index = 0; index < myList.length; index++){
-    var aSpanTag =document.createElement("SPAN");
-    var someTxt = document.createTextNode("\u00D7");
-    aSpanTag.className = "close";
-    aSpanTag.appendChild(someTxt);
-    myList[index].appendChild(aSpanTag);
-}
-        //Close button
-var closeButton = document.getElementsByClassName("close");
+     //Close button
+const closeButton = document.getElementsByClassName("close");
 
 for (i = 0; i < closeButton.length; i++){
     closeButton[i].onclick = function () {
-        var theDiv = this.parentElement;
+        const theDiv = this.parentElement;
         theDiv.style.display = "none";
     }
 }
 
-var ulList = document.querySelector('ul');
+const ulList = document.querySelector('ul');
 ulList.addEventListener('click', function(event) {
     console.log(event);
     if(event.target.tagName === "LI"){
@@ -28,9 +18,9 @@ ulList.addEventListener('click', function(event) {
 
     //creating todos function
 function createNewElement() {
-    var li = document.createElement('li');
-    var theInputValue = document.getElementById("the-input").value;
-    var textNode = document.createTextNode(theInputValue);
+    const li = document.createElement('li');
+    const theInputValue = document.getElementById("the-input").value;
+    const textNode = document.createTextNode(theInputValue);
     li.appendChild(textNode);
 
     if(theInputValue === ''){
@@ -39,8 +29,8 @@ function createNewElement() {
         document.getElementById("the-ul").appendChild(li);
     }
     document.getElementById("the-input").value = "";
-    var thePanTag = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
+    const thePanTag = document.createElement("SPAN");
+    const txt = document.createTextNode("\u00D7");
     thePanTag.className = "close";
     thePanTag.appendChild(txt);
     li.appendChild(thePanTag);
@@ -49,7 +39,7 @@ function createNewElement() {
 
     for (i = 0; i < closeButton.length; i++){
         closeButton[i].onclick = function () {
-            var theDiv = this.parentElement;
+            const theDiv = this.parentElement;
             theDiv.style.display = "none";
         }
     }

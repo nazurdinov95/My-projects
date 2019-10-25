@@ -66,12 +66,12 @@ function createNewElement() {
 const input = document.getElementById("the-input");
 const button = document.getElementById("addButton");
 
-input.addEventListener('keydown', => {
+input.addEventListener('keydown', =>() {
     if (e.keyCode === 13){
         createNewElement();
 }
 });
 
-button.addEventListener('click', => {
+button.addEventListener('click', =>() {
     createNewElement();
 });

@@ -25,18 +25,6 @@ function createNewElement() {
     const textNode = document.createTextNode(theInputValue);
     li.appendChild(textNode);
 
-    function newItem() {
-        const item = document.getElementById("the-input").value;
-        const ul = document.getElementById("the-ul");
-        const li = document.createElement("li");
-        li.appendChild(document.createTextNode(item));
-        ul.appendChild(li);
-        document.getElementById("the-input").value = "";
-    }
-
-    document.body.onkeyup = function(e) {
-    };
-
     if (theInputValue === '') {
         alert("Hey this cannot be empty")
     } else {
@@ -74,4 +62,4 @@ input.addEventListener('keydown', (e)=> {
 
 button.addEventListener('click', ()=> {
     createNewElement();
-});
+})

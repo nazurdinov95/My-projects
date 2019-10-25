@@ -25,21 +25,6 @@ function createNewElement() {
     var textNode = document.createTextNode(theInputValue);
     li.appendChild(textNode);
 
-    function newItem() {
-        theInputValue = document.getElementById("the-input").value;
-        var ul = document.getElementById("the-ul");
-        var li = document.createElement("li");
-        li.appendChild(document.createTextNode(theInputValue));
-        ul.appendChild(li);
-        document.getElementById("the-input").value = "";
-    }
-
-    document.body.onkeyup = function(e) {
-        if (e.keyCode == 13) {
-            newItem();
-        }
-    };
-
     if (theInputValue === '') {
         alert("Hey this cannot be empty")
     } else {

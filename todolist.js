@@ -20,24 +20,21 @@ ulList.addEventListener('click', function(event) {
 
 //creating todos function
 function createNewElement() {
-    var li = document.createElement('li');
-    var theInputValue = document.getElementById("the-input").value;
-    var textNode = document.createTextNode(theInputValue);
+    const li = document.createElement('li');
+    const theInputValue = document.getElementById("the-input").value;
+    const textNode = document.createTextNode(theInputValue);
     li.appendChild(textNode);
 
     function newItem() {
-        var item = document.getElementById("the-input").value;
-        var ul = document.getElementById("the-ul");
-        var li = document.createElement("li");
+        const item = document.getElementById("the-input").value;
+        const ul = document.getElementById("the-ul");
+        const li = document.createElement("li");
         li.appendChild(document.createTextNode(item));
         ul.appendChild(li);
         document.getElementById("the-input").value = "";
     }
 
     document.body.onkeyup = function(e) {
-        if (e.keyCode == 13) {
-            newItem();
-        }
     };
 
     if (theInputValue === '') {
@@ -66,12 +63,15 @@ function createNewElement() {
 const input = document.getElementById("the-input");
 const button = document.getElementById("addButton");
 
-input.addEventListener('keydown', =>(e) {
+document.body.onkeyup = function(e) {
+};
+
+input.addEventListener('keydown', (e)=> {
     if (e.keyCode === 13){
         createNewElement();
 }
 });
 
-button.addEventListener('click', =>() {
+button.addEventListener('click', ()=> {
     createNewElement();
 });

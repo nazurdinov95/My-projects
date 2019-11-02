@@ -59,6 +59,7 @@ function editTask() {
         editButton.innerHTML = "<i class='material-icons' >save</i>";
     }
     listItem.classList.toggle('editMode');
+
 }
 
 const input = document.getElementById('input');

@@ -12,7 +12,7 @@
     display: table;
     clear: both;
 }
-#the-input {
+#input {
     width: 70%;
     padding: 10px;
     float: left;
@@ -21,7 +21,7 @@
     border: none;
     border-radius: 0;
 }
-.creat-button {
+#addButton {
     padding: 10px;
     background-color: blue;
     font-size: 15px;
@@ -37,7 +37,7 @@
     -o-transition: 0.4s;
     transition: 0.4s;
 }
-.creat-button:hover {
+#addButton:hover {
     background-color: #ccc;
     color: black;
 }

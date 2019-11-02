@@ -51,15 +51,17 @@ function editTask() {
 
     if (containsClass){
         label.innerText = input.value;
-        editButton.className = "material-icons edit";
-        editButton.innerHTML = "<i class='material-icons' >edit</i>";
+        editButton.innerHTML = "<i>Edit</i>";
     }else {
         input.value = label.innerText;
-        editButton.className = "material-icons save";
-        editButton.innerHTML = "<i class='material-icons' >save</i>";
+        editButton.innerHTML = "<i>Save</i>";
     }
     listItem.classList.toggle('editMode');
 
+    editButton.addEventListener('click', () => {
+        editTask();
+})
+console.log(editButton);
 }
 
 const input = document.getElementById('input');

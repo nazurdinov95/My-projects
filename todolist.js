@@ -76,4 +76,3 @@ input.addEventListener('keydown', (e) => {
 button.addEventListener('click', () => {
     createNewElement();
 })
-
